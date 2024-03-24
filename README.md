@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# OneCenter + SignalWire
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend implemtation of OneCenter with Signalwire for TadHack
 
-Currently, two official plugins are available:
+- API and SignalWire Relay Consumer [API/RELAY-CONSUMER](https://github.com/onecenterai/signal-wire-api)
+- Demo Phone Number: +12065897026
+## How it works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- The number is connected to a sample partner on the OneCenter platform
+- When called, our relay consumer pick up the call and query our AI to get the best possible response
+- And the conversation continues until the user ends the call.
+- The conversation can be about a problem the caller is having with the partner product or service
+- The caller can get his or her queries resolved on the call
