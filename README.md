@@ -4,6 +4,7 @@ This is the frontend implemtation of OneCenter with Signalwire for TadHack
 
 - API and SignalWire Relay Consumer [API/RELAY-CONSUMER](https://github.com/onecenterai/signal-wire-api)
 - Demo Phone Number: +12065897026
+- You need to be registered on [ONECENTER](https://signalwire.onecenter.ai) for calls to go through
 ## How it works
 
 - The number is connected to a sample partner on the OneCenter platform
