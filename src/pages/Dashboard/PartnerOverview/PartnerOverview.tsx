@@ -23,7 +23,7 @@ function PartnerOverview() {
   // Function to check if there are empty properties in the partner object, excluding 'assigned_phone'
   const hasEmptyProperties = () => {
     for (const key in partner) {
-      if (partner.hasOwnProperty(key) && key !== "assigned_phone" && key !== "corpus_id" && !partner[key]) {
+      if (partner.hasOwnProperty(key) && key !== "assigned_phone" && key !== "corpus_id" && key !== "logo" && !partner[key]) {
         return true; // Found an empty property
       }
     }
@@ -43,6 +43,7 @@ function PartnerOverview() {
           <Card
             logo={partner?.logo}
             name={partner?.name}
+            assigned_phone={partner?.assigned_phone}
             website={partner?.website}
             iconContainerWidth={"20rem"}
             description={partner?.description}

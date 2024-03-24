@@ -62,11 +62,13 @@ interface cardProps {
   name?: string;
   logo?: string;
   category?: string;
+  assigned_phone?: string;
 }
-function Card({ primaryBtn, website, primaryFunc, btnDisable, iconContainerWidth, description, name, logo, category }: cardProps) {
+function Card({ primaryBtn, website, primaryFunc, btnDisable, iconContainerWidth, description, name, logo, category, assigned_phone }: cardProps) {
   const classes = useStyles();
   const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
   console.log(description);
+  console.log(primaryFunc);
 
   return (
     // <Grid item md={4}>
@@ -114,11 +116,20 @@ function Card({ primaryBtn, website, primaryFunc, btnDisable, iconContainerWidth
           </Grid>
           <Grid item md={12} className="center-space-btw">
             {primaryBtn ? (
-              <StyledButton variant="contained" color="primary" onClick={primaryFunc} disabled={btnDisable}>
-                {primaryBtn}
-              </StyledButton>
+              <a href={`tel:${assigned_phone}`}>
+                <StyledButton variant="contained" color="primary" onClick={primaryFunc} disabled={btnDisable}>
+                  {primaryBtn}
+                </StyledButton>
+              </a>
             ) : null}
           </Grid>
+          {/* <Grid item md={12} className="center-space-btw">
+            {primaryBtn ? (
+              <StyledButton variant="contained" color="primary" disabled={btnDisable}>
+                Call {name}: {assigned_phone ? assigned_phone : "Phone not available"}
+              </StyledButton>
+            ) : null}
+          </Grid> */}
         </Grid>
       </Container>
     </Paper>
